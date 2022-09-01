@@ -29,13 +29,19 @@ TextStyle header1 = GoogleFonts.poppins(
 TextStyle header2 = GoogleFonts.poppins(
   color: blackColor,
   fontSize: 20,
-  fontWeight: reguler,
+  fontWeight: semiBold,
 );
 
 TextStyle normal = GoogleFonts.poppins(
   color: blackColor,
-  fontSize: 16,
+  fontSize: 12,
   fontWeight: reguler,
+);
+
+TextStyle formText = GoogleFonts.poppins(
+  color: blackColor,
+  fontSize: 14,
+  fontWeight: medium,
 );
 
 TextStyle title = GoogleFonts.poppins(
