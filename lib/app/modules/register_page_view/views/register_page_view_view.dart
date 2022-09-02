@@ -1,8 +1,6 @@
-import 'package:citiasia/app/modules/enter_password/views/enter_password_view.dart';
 import 'package:citiasia/app/routes/app_pages.dart';
 import 'package:citiasia/app/utils/theme.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
 import '../controllers/register_page_view_controller.dart';
