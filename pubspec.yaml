@@ -7,6 +7,7 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
+  floating_bottom_navigation_bar: ^1.5.2
   flutter:
     sdk: flutter
   get: 4.6.5

@@ -1,3 +1,4 @@
+import 'package:citiasia/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../utils/theme.dart';
@@ -31,7 +32,7 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                 maxLines: 1,
                 decoration: InputDecoration(
                   labelText: "E-Mail",
-                  labelStyle: blueText,
+                  labelStyle: greenText,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ),
@@ -57,28 +58,29 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                   obscureText: controller.secureText.isTrue,
                   maxLines: 1,
                   decoration: InputDecoration(
-                      labelText: "Password",
-                      labelStyle: blueText,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(18.0),
+                    labelText: "Password",
+                    labelStyle: greenText,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      borderSide: BorderSide(
+                        color: primaryColor,
                       ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                        borderSide: BorderSide(
-                          color: primaryColor,
-                        ),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        controller.secureText.value
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        color: primaryColor,
                       ),
-                      suffixIcon: IconButton(
-                        icon: Icon(
-                          controller.secureText.value
-                              ? Icons.visibility
-                              : Icons.visibility_off,
-                          color: primaryColor,
-                        ),
-                        onPressed: () {
-                          controller.changeVisibility();
-                        },
-                      )),
+                      onPressed: () {
+                        controller.changeVisibility();
+                      },
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -103,7 +105,9 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
               ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.REGISTER_PAGE_VIEW);
+              },
               child: Text("daftar"),
             ),
           ],
