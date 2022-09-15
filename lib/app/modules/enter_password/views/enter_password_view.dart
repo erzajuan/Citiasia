@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 
 import '../../../routes/app_pages.dart';
 import '../../../utils/rezza_theme.dart';
-import '../../../utils/theme.dart';
 import '../controllers/enter_password_controller.dart';
 
 class EnterPasswordView extends GetView<EnterPasswordController> {
@@ -83,7 +82,7 @@ class EnterPasswordView extends GetView<EnterPasswordController> {
                             controller.secureText.value
                                 ? Icons.visibility
                                 : Icons.visibility_off,
-                            color: primaryColor,
+                            color: RezzaTheme.of(context).primaryColor,
                           ),
                           onPressed: () {
                             controller.changeVisibility();
@@ -110,7 +109,7 @@ class EnterPasswordView extends GetView<EnterPasswordController> {
                             controller.resecureText.value
                                 ? Icons.visibility
                                 : Icons.visibility_off,
-                            color: primaryColor,
+                            color: RezzaTheme.of(context).primaryColor,
                           ),
                           onPressed: () {
                             controller.changeVisibility2();

@@ -1,5 +1,3 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:get/get.dart';
 
 import '../modules/enter_password/bindings/enter_password_binding.dart';
@@ -10,13 +8,17 @@ import '../modules/login_page_view/bindings/login_page_view_binding.dart';
 import '../modules/login_page_view/views/login_page_view_view.dart';
 import '../modules/register_page_view/bindings/register_page_view_binding.dart';
 import '../modules/register_page_view/views/register_page_view_view.dart';
+import '../modules/splash/bindings/splash_binding.dart';
+import '../modules/splash/views/splash_view.dart';
+
+// ignore_for_file: constant_identifier_names
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN_PAGE_VIEW;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
     GetPage(
@@ -38,6 +40,11 @@ class AppPages {
       name: _Paths.ENTER_PASSWORD,
       page: () => EnterPasswordView(),
       binding: EnterPasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.SPLASH,
+      page: () => const SplashView(),
+      binding: SplashBinding(),
     ),
   ];
 }
