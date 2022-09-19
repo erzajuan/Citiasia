@@ -36,7 +36,7 @@ class WelcomePageView extends GetView<WelcomePageController> {
                 borderRadius: BorderRadius.circular(10.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: primaryColor,
+                    primary: primaryColor,
                   ),
                   onPressed: () {
                     Get.toNamed(Routes.LOGIN_PAGE_VIEW);

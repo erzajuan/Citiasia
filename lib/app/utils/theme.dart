@@ -5,6 +5,11 @@ Color primaryColor = Color(0xff398AB9);
 Color blackColor = Color.fromARGB(255, 0, 0, 0);
 Color blackFont = Color(0xFF141414);
 Color whiteColor = Colors.white;
+Color grey1 = Color.fromARGB(255, 240, 240, 240);
+Color grey2 = Color.fromARGB(255, 240, 240, 240);
+Color grey3 = Color.fromARGB(255, 174, 174, 174);
+Color grey4 = Color.fromARGB(255, 104, 104, 104);
+Color grey5 = Color.fromARGB(255, 62, 64, 65);
 
 double edge24 = 24;
 
@@ -73,6 +78,24 @@ TextStyle greenText = GoogleFonts.poppins(
   color: primaryColor,
   fontSize: 12,
   fontWeight: semiBold,
+);
+
+TextStyle greenText2 = GoogleFonts.poppins(
+  color: primaryColor,
+  fontSize: 14,
+  fontWeight: medium,
+);
+
+TextStyle grey4Text = GoogleFonts.inter(
+  fontWeight: FontWeight.w400,
+  color: grey4,
+  fontSize: 14,
+);
+
+TextStyle grey5Text = GoogleFonts.inter(
+  fontWeight: FontWeight.w500,
+  color: grey4,
+  fontSize: 16,
 );
 
 TextStyle button = GoogleFonts.poppins(
