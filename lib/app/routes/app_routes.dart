@@ -10,6 +10,7 @@ abstract class Routes {
   static const REGISTER_PAGE_VIEW = _Paths.REGISTER_PAGE_VIEW;
   static const ENTER_PASSWORD = _Paths.ENTER_PASSWORD;
   static const SPLASH = _Paths.SPLASH;
+  static const WELCOME = _Paths.WELCOME;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const REGISTER_PAGE_VIEW = '/register-page-view';
   static const ENTER_PASSWORD = '/enter-password';
   static const SPLASH = '/splash';
+  static const WELCOME = '/welcome';
 }

@@ -21,6 +21,6 @@ class SplashController extends GetxController {
 
   void redirect() async {
     await Future.delayed(const Duration(seconds: 2));
-    Get.offAllNamed(Routes.LOGIN_PAGE_VIEW);
+    Get.offAllNamed(Routes.WELCOME);
   }
 }

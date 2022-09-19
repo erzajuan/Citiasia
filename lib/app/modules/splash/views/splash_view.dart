@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
 import '../controllers/splash_controller.dart';
@@ -15,10 +14,9 @@ class SplashView extends GetView<SplashController> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(
-              Icons.abc,
-              size: 120.0,
-              color: Colors.blueAccent,
+            Image.asset(
+              "assets/images/logo.png",
+              fit: BoxFit.contain,
             )
           ],
         )
