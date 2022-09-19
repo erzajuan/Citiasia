@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Color primaryColor = Color(0xff7FBCD2);
-Color blackColor = Colors.black;
+Color primaryColor = Color(0xff398AB9);
+Color blackColor = Color.fromARGB(255, 0, 0, 0);
+Color blackFont = Color(0xFF141414);
 Color whiteColor = Colors.white;
 
 double edge24 = 24;
@@ -21,21 +22,27 @@ FontWeight reguler = FontWeight.normal;
 FontStyle italic = FontStyle.italic;
 
 TextStyle header1 = GoogleFonts.poppins(
-  color: blackColor,
-  fontSize: 24,
+  color: blackFont,
+  fontSize: 16,
   fontWeight: semiBold,
 );
 
 TextStyle header2 = GoogleFonts.poppins(
   color: blackColor,
-  fontSize: 20,
-  fontWeight: reguler,
+  fontSize: 18,
+  fontWeight: semiBold,
 );
 
 TextStyle normal = GoogleFonts.poppins(
   color: blackColor,
-  fontSize: 16,
+  fontSize: 12,
   fontWeight: reguler,
+);
+
+TextStyle formText = GoogleFonts.poppins(
+  color: blackColor,
+  fontSize: 14,
+  fontWeight: medium,
 );
 
 TextStyle title = GoogleFonts.poppins(
@@ -53,14 +60,19 @@ TextStyle engText = GoogleFonts.poppins(
 
 TextStyle whiteText = GoogleFonts.poppins(
   color: whiteColor,
-  fontSize: 18,
+  fontSize: 14,
+  fontWeight: semiBold,
+);
+TextStyle blackText = GoogleFonts.poppins(
+  color: blackFont,
+  fontSize: 14,
   fontWeight: semiBold,
 );
 
-TextStyle blueText = GoogleFonts.poppins(
+TextStyle greenText = GoogleFonts.poppins(
   color: primaryColor,
-  fontSize: 14,
-  fontWeight: medium,
+  fontSize: 12,
+  fontWeight: semiBold,
 );
 
 TextStyle button = GoogleFonts.poppins(
