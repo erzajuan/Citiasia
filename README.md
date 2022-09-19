@@ -1,16 +1,6 @@
-# citiasia
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Citiasia Project
+### Dependencies
+- Flutter Framework
+- Etc.
+### Documentation
+https://user-images.githubusercontent.com/43742778/191054422-929dafac-23b2-4451-92cd-5b2c9d2428dc.mp4
