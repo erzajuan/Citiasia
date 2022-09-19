@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Color primaryColor = Color(0xff00838F);
+Color primaryColor = Color(0xff398AB9);
 Color blackColor = Color.fromARGB(255, 0, 0, 0);
 Color blackFont = Color(0xFF141414);
 Color whiteColor = Colors.white;
@@ -25,7 +25,6 @@ TextStyle header1 = GoogleFonts.poppins(
   color: blackFont,
   fontSize: 16,
   fontWeight: semiBold,
-  
 );
 
 TextStyle header2 = GoogleFonts.poppins(
