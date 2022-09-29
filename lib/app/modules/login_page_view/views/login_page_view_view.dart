@@ -5,6 +5,10 @@ import '../../../utils/theme.dart';
 import '../controllers/login_page_view_controller.dart';
 
 class LoginPageViewView extends GetView<LoginPageViewController> {
+  void test() {
+    String? name;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
