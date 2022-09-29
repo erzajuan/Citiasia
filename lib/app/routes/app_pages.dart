@@ -1,3 +1,7 @@
+import 'package:citiasia/app/modules/forgot_password_confirmation_page/bindings/forgot_password_confirmation_page_binding.dart';
+import 'package:citiasia/app/modules/forgot_password_confirmation_page/views/forgot_password_confirmation_page_view.dart';
+import 'package:citiasia/app/modules/forgot_password_page/bindings/forgot_password_page_binding.dart';
+import 'package:citiasia/app/modules/forgot_password_page/views/forgot_password_page_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/enter_password/bindings/enter_password_binding.dart';
@@ -5,7 +9,7 @@ import '../modules/enter_password/views/enter_password_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login_page_view/bindings/login_page_view_binding.dart';
-import '../modules/login_page_view/views/login_page_view_view.dart';
+import '../modules/login_page_view/views/login_page_view.dart';
 import '../modules/register_page_view/bindings/register_page_view_binding.dart';
 import '../modules/register_page_view/views/register_page_view_view.dart';
 import '../modules/splash_screen_page/bindings/splash_screen_page_binding.dart';
@@ -30,7 +34,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.LOGIN_PAGE_VIEW,
-      page: () => LoginPageViewView(),
+      page: () => LoginPageView(),
       binding: LoginPageViewBinding(),
     ),
     GetPage(
@@ -52,6 +56,16 @@ class AppPages {
       name: _Paths.WELCOME_PAGE,
       page: () => const WelcomePageView(),
       binding: WelcomePageBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGOT_PASSWORD_PAGE,
+      page: () => ForgotPasswordPageView(),
+      binding: ForgotPasswordPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGOT_PASSWORD_CONFIRMATION_PAGE,
+      page: () => ForgotPasswordConfirmationPageView(),
+      binding: ForgotPasswordConfirmationPageBinding(),
     ),
   ];
 }

@@ -10,6 +10,7 @@ Color grey2 = Color.fromARGB(255, 240, 240, 240);
 Color grey3 = Color.fromARGB(255, 174, 174, 174);
 Color grey4 = Color.fromARGB(255, 104, 104, 104);
 Color grey5 = Color.fromARGB(255, 62, 64, 65);
+Color blue3 = Color.fromARGB(255, 215, 232, 241);
 
 double edge24 = 24;
 

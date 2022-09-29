@@ -11,6 +11,9 @@ abstract class Routes {
   static const ENTER_PASSWORD = _Paths.ENTER_PASSWORD;
   static const SPLASH_SCREEN_PAGE = _Paths.SPLASH_SCREEN_PAGE;
   static const WELCOME_PAGE = _Paths.WELCOME_PAGE;
+  static const FORGOT_PASSWORD_PAGE = _Paths.FORGOT_PASSWORD_PAGE;
+  static const FORGOT_PASSWORD_CONFIRMATION_PAGE =
+      _Paths.FORGOT_PASSWORD_CONFIRMATION_PAGE;
 }
 
 abstract class _Paths {
@@ -21,4 +24,7 @@ abstract class _Paths {
   static const ENTER_PASSWORD = '/enter-password';
   static const SPLASH_SCREEN_PAGE = '/splash-screen-page';
   static const WELCOME_PAGE = '/welcome-page';
+  static const FORGOT_PASSWORD_PAGE = '/forgot-password-page';
+  static const FORGOT_PASSWORD_CONFIRMATION_PAGE =
+      '/forgot-password-confirmation_page';
 }

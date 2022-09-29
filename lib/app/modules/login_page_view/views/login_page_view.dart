@@ -4,14 +4,11 @@ import 'package:get/get.dart';
 import '../../../utils/theme.dart';
 import '../controllers/login_page_view_controller.dart';
 
-class LoginPageViewView extends GetView<LoginPageViewController> {
-  void test() {
-    String? name;
-  }
-
+class LoginPageView extends GetView<LoginPageViewController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         title: Text(
@@ -58,10 +55,10 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                     labelText: "Masukkan email atau nomor telepon anda",
                     labelStyle: grey4Text,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(defaultRadius),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(defaultRadius),
                       borderSide: BorderSide(
                         color: primaryColor,
                       ),
@@ -93,10 +90,10 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                       labelText: "Masukkan kata sandi akun anda",
                       labelStyle: grey4Text,
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(defaultRadius),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(defaultRadius),
                         borderSide: BorderSide(
                           color: primaryColor,
                         ),
@@ -123,9 +120,12 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                 alignment: Alignment.centerRight,
                 child: Container(
                   margin: EdgeInsets.only(top: 8),
-                  child: Text(
-                    "Lupa kata sandi?",
-                    style: greenText,
+                  child: GestureDetector(
+                    onTap: () => {Get.toNamed(Routes.FORGOT_PASSWORD_PAGE)},
+                    child: Text(
+                      "Lupa kata sandi?",
+                      style: greenText,
+                    ),
                   ),
                 ),
               ),
@@ -135,7 +135,7 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                   width: MediaQuery.of(context).size.width * 0.95,
                   height: 45,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(defaultRadius),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           primary: primaryColor,
@@ -177,7 +177,7 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                   width: MediaQuery.of(context).size.width * 0.95,
                   height: 45,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(defaultRadius),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: grey1,
@@ -186,7 +186,7 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset("assets/images/Google.png"),
+                          Image.asset("assets/images/google.png"),
                           Text("  Google", style: grey5Text),
                         ],
                       ),
@@ -200,7 +200,7 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                   width: MediaQuery.of(context).size.width * 0.95,
                   height: 45,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(defaultRadius),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: grey1,
@@ -209,7 +209,7 @@ class LoginPageViewView extends GetView<LoginPageViewController> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset("assets/images/Facebook.png"),
+                          Image.asset("assets/images/facebook.png"),
                           Text("  Facebook", style: grey5Text),
                         ],
                       ),
