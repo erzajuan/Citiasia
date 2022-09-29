@@ -15,7 +15,7 @@ class RegisterView extends GetView<RegisterController> {
           color: Colors.black,
         ),
         backgroundColor: Colors.white,
-        elevation: 3.9,
+        elevation: 3.8,
         shadowColor: Color.fromARGB(255, 237, 239, 237),
         title: Text(
           'Daftar',

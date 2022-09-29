@@ -1,5 +1,6 @@
 import 'package:citiasia/app/modules/common/styles.dart';
 import 'package:citiasia/app/modules/register/controllers/register_controller.dart';
+import 'package:citiasia/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -32,6 +33,28 @@ class MainColumnRegisterView extends GetView<RegisterController> {
           height: 30.0,
         ),
         Text(
+          "Nama",
+          style: Theme.of(context).textTheme.headline6!.copyWith(
+              color: darkPrimaryColor,
+              fontWeight: FontWeight.bold,
+              fontSize: 15.0),
+        ),
+        const SizedBox(
+          height: 10.0,
+        ),
+        TextField(
+          decoration: InputDecoration(
+            hintText: 'Masukan nama anda',
+            // focusedBorder: OutlineInputBorder(),
+            border: outlineInputBorder,
+            contentPadding: EdgeInsets.all(13),
+            isDense: true,
+          ),
+        ),
+        const SizedBox(
+          height: 20.0,
+        ),
+        Text(
           "Email",
           style: Theme.of(context).textTheme.headline6!.copyWith(
               color: darkPrimaryColor,
@@ -44,7 +67,7 @@ class MainColumnRegisterView extends GetView<RegisterController> {
         TextField(
           keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
-            hintText: 'Masukan alamat email anda',
+            hintText: 'Masukkan alamat email anda',
             // focusedBorder: OutlineInputBorder(),
             border: outlineInputBorder,
             contentPadding: EdgeInsets.all(13),
@@ -138,10 +161,47 @@ class MainColumnRegisterView extends GetView<RegisterController> {
                 isDense: true,
               )),
         ),
-        const SizedBox(height: 13),
+        Container(
+            margin: EdgeInsets.symmetric(vertical: 5),
+            child: Row(
+              children: [
+                Obx(
+                  () => Checkbox(
+                    checkColor: Colors.white,
+                    fillColor: MaterialStateProperty.resolveWith(getColor),
+                    value: controller.obscureCheckbox.value,
+                    onChanged: ((value) => controller.isCheckbox()),
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    children: [
+                      Text(
+                        "Dengan mendaftar anda mengerti dan menyetujui",
+                        style: TextStyle(fontSize: 12),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Kebijakan Privasi",
+                            style: TextStyle(fontSize: 12, color: primaryColor),
+                          ),
+                          Text(
+                            "dari aplikasi kami.",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            )),
         const SizedBox(height: 20),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () => Get.toNamed(Routes.REGISTER_SUCCESS),
           child: const Text("Daftar"),
           style: styleButtonPrimary,
         ),
@@ -203,4 +263,16 @@ class MainColumnRegisterView extends GetView<RegisterController> {
       ],
     );
   }
+}
+
+Color getColor(Set<MaterialState> states) {
+  const Set<MaterialState> interactiveStates = <MaterialState>{
+    MaterialState.pressed,
+    MaterialState.hovered,
+    MaterialState.focused,
+  };
+  if (states.any(interactiveStates.contains)) {
+    return Colors.blue;
+  }
+  return primaryColor;
 }
